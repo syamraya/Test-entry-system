@@ -1,6 +1,6 @@
 # Author: Syamraya
 # educational purpose only
-# Entry system DC MokletDev v1.0 (NOT LICENSED)
+# Entry system DC v1.0 (NOT LICENSED)
 
 
 
