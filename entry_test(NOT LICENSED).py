@@ -19,7 +19,7 @@ colorama.init(autoreset=True)
 
 LOG_FILE = "log_masuk.txt"
 VIP_FILE = "vip_list.txt"
-ADMIN_PASSWORD = "ibraganteng999369"
+ADMIN_PASSWORD = "sayaganteng6785"
 SECRET_CODE = "izinmasukmin"
 MAX_GAGAL = 3
 BLOCK_TIME = 30  # dalam detik (30s)
@@ -53,11 +53,11 @@ def hitung_login(nama):
 
 def tampilkan_log():
     if not os.path.exists(LOG_FILE) or os.stat(LOG_FILE).st_size == 0:
-        print(Fore.RED + "\nBelum ada yang masuk DC MokletDev 😔\n")
+        print(Fore.RED + "\nBelum ada yang masuk DC 😔\n")
         time.sleep(1)
         return
 
-    print(Fore.CYAN + "\n=== Daftar User yang Masuk DC MokletDev ===")
+    print(Fore.CYAN + "\n=== Daftar User yang Masuk DC ===")
     time.sleep(1)
     
     with open(LOG_FILE, "r") as file:
@@ -113,7 +113,7 @@ def reset_log():
 
 def leaderboard():
     if not os.path.exists(LOG_FILE):
-        print(Fore.RED + "\nBelum ada yang masuk DC MokletDev 😔\n")
+        print(Fore.RED + "\nBelum ada yang masuk DC 😔\n")
         time.sleep(1)
         return
     
@@ -122,7 +122,7 @@ def leaderboard():
 
     ranking = Counter(users).most_common()
     
-    print(Fore.CYAN + "\n=== Leaderboard MokletDev ===")
+    print(Fore.CYAN + "\n=== Leaderboard ===")
     time.sleep(1)
     for i, (user, count) in enumerate(ranking, 1):
         role = cek_vip(user)  # Mengecek apakah user VIP/VVIP atau biasa
@@ -224,7 +224,7 @@ def history_user():
 
 
 def masuk_dc():
-    print(Fore.CYAN + "\n=== Selamat datang di MokletDev! ===\n")
+    print(Fore.CYAN + "\n=== Selamat datang di DC! ===\n")
     time.sleep(1)
     
     nama = input(Fore.CYAN + "Masukkan nama Anda: ").strip()
@@ -285,7 +285,7 @@ def login_admin():
         time.sleep(1)
         while True:
             
-            print(Fore.CYAN + "\n=== Admin Panel MokletDev ===")
+            print(Fore.CYAN + "\n=== Admin Panel ===")
             print("1. Tampilkan Daftar User")
             print("2. Reset Log")
             print("3. Leaderboard")
@@ -314,7 +314,7 @@ def login_admin():
 
 def main():
     while True:
-        print(Fore.CYAN + "\n=== Sistem Masuk DC MokletDev ===")
+        print(Fore.CYAN + "\n=== Sistem Masuk DC ===")
         print("1. Masuk DC")
         print("2. Leaderboard")
         print("3. Keluar")
@@ -335,7 +335,7 @@ def main():
             break
         elif pilihan == "4":
             print(Fore.CYAN + "\n=== Info Program ===")
-            print("Sistem Masuk DC MokletDev " + Fore.YELLOW + "v1.0")
+            print("Sistem Masuk DC " + Fore.YELLOW + "v1.0")
             print("Dibuat oleh: Syamraya Slebeww")
             print("GitHub: https://github.com/syamraya\n")
         else:
